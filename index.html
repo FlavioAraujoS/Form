@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div class="container-fluid full-height d-flex flex-column">
+      <div class="row">
+        <img src="./img/topo.svg" class="header-img p-0" alt="Cabeçalho" />
+      </div>
+      <div class="row flex-fill d-flex">
+        <div class="container content my-md-auto p-5 p-md-0 col-md-6">
+          <!-- Alerta formulario enviado com sucesso -->
+          <div
+            class="alert alert-success alert-dismissible fade show d-none"
+            role="alert"
+            id="alertaSucesso"
+          >
+            <strong>Formulário enviado com sucesso!</strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- Alerta formulario enviado com erro -->
+          <div
+            class="alert alert-danger alert-dismissible fade show d-none"
+            role="alert"
+            id="alertaErro"
+          >
+            <strong
+              >Todos os campos precisam estar preenchidos corretamente.
+            </strong>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Formulário e outros conteúdos -->
+          <form action="post" id="formulario">
+            <div class="row">
+              <!-- Logo Usuario -->
+              <div class="col-md-3 mt-md-4 mt-sm-5 text-center">
+                <img src="./img/Icone-perfil.png" class="rounded img-perfil" />
+              </div>
+              <!-- Inputs -->
+              <div class="col-md-9">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="inputName" class="form-label">Nome</label>
+                    <input
+                      type="text"
+                      class="form-control input-custom"
+                      id="inputNome"
+                    />
+                    <div class="invalid-feedback">Insira um nome válido.</div>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="inputSobrenome" class="form-label"
+                      >Sobrenome</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control input-custom"
+                      id="inputSobrenome"
+                    />
+                    <div class="invalid-feedback">
+                      Insira um sobrenome válido.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control input-custom"
+                      id="inputEmail"
+                    />
+                    <div class="invalid-feedback">
+                      Insira um email válido. Ex: email@gmail.com
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="inputTelefone" class="form-label"
+                      >Telefone</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control input-custom"
+                      id="inputTelefone"
+                      maxlength="15"
+                    />
+                    <div class="invalid-feedback">
+                      Insira um telefone válido Ex: (11) 93933-2312
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="inputObservacao" class="form-label">Observação</label>
+              <textarea
+                class="form-control input-custom"
+                id="inputObservacao"
+                rows="4"
+              ></textarea>
+              <div class="invalid-feedback">
+                O campo observação não pode está em branco.
+              </div>
+            </div>
+            <!-- Botões -->
+
+            <div
+              class="mt-4 mb-1 d-grid gap-2 d-md-flex justify-content-md-end"
+            >
+              <button
+                class="btn mb-2 btn-primary botaoSalvar"
+                type="button"
+                id="btnSalvar"
+                data-toggle="tooltip"
+                data-placement="top"
+              >
+                Salvar
+              </button>
+              <button
+                class="btn me-md-2 botaoCancelar btn-outline-danger order-md-first"
+                type="button"
+                id="btnCancelar"
+              >
+                Cancelar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <img src="./img/footer.svg" class="footer-img p-0" alt="Rodapé" />
+      </div>
+    </div>
+    <script src="./js/cute-alert.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
